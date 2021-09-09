@@ -15,6 +15,32 @@ ActiveRecord::Schema.define(version: 2021_09_09_052808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "leccciones", force: :cascade do |t|
+    t.text "video_seña_dact"
+    t.text "imagen_ref"
+    t.text "imagen_tipog"
+    t.integer "tema_id"
+    t.text "imagen_lecto_escrit"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rol_ids", force: :cascade do |t|
+    t.text "grabacion"
+    t.integer "usuario_id"
+    t.integer "leccion_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "temas", force: :cascade do |t|
+    t.text "nombre"
+    t.text "examen"
+    t.text "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -25,6 +51,12 @@ ActiveRecord::Schema.define(version: 2021_09_09_052808) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.text "rol"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
