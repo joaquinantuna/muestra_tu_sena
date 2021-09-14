@@ -6,12 +6,10 @@ User.destroy_all
 
 
 lesson_1 = Lesson.new(
-  name: "Vocales",
-  photo: "f",
-  video: "v"
+  name: "Vocales 1",
 )
-file_foto = URI.open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1631538684/vocales_foto.png")
-file_video = URI.open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631546178/vocales_video.mp4")
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1631538684/vocales_foto.png")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631546178/vocales_video.mp4")
 
 lesson_1.photo.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
 lesson_1.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
