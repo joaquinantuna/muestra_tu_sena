@@ -7,10 +7,13 @@
   Teniendo una comunicacion mas inclusiva y logrando erradicar la analfabetizacion
   que afecta a la Comunidad Sorda.</H2>
 
-    <%= image_tag "logo.jpg", width: 100 %>
-  </div>
+  <%= image_tag "logo.jpg", width: 100 %>
+
+
 
   <a href="muestratusena@gmail.com">Correo electronico</a><br>
-  <a href="https://facebook.com/">https://www.facebook.com/muestratusena</a>
->
+  <a href="https://facebook.com/muestratusena">https://www.facebook.com/muestratusena</a><br>
+
+  <%= link_to "Iniciar sesión", new_user_session_path, class: "btn btn-primary" unless user_signed_in? %>
+
 </div>
