@@ -1,4 +1,4 @@
-/require 'open-uri'/
+require 'open-uri'
 Session.destroy_all
 Lesson.destroy_all
 User.destroy_all
