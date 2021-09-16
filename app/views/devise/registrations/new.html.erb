@@ -7,7 +7,14 @@
   Teniendo una comunicacion mas inclusiva y logrando erradicar la analfabetizacion
   que afecta a la Comunidad Sorda.</H2>
 
-  <%= image_tag "logo.jpg", width: 100 %>
+ <div class="text-center">
+    <%= cl_video_tag( "../Lessons/Otros/Bienvenida_video",
+      :loop => false, :controls => true,
+      :transformation => [
+        :height=>360, :width=>480, :crop=>"pad",
+        :quality=>70 ],
+      :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+  </div>
 
 </div>
 
@@ -33,9 +40,10 @@
 
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
   </div>
-</div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
