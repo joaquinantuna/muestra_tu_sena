@@ -7,4 +7,6 @@ class LessonsController < ApplicationController
   def show
     @lesson = Lesson.find(params[:id])
   end
+  def lesson_params
+    params.require(:lesson).permit(:name, photos: [])
 end

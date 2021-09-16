@@ -5,6 +5,9 @@
     :height=>360, :width=>480, :crop=>"pad",
     :quality=>70, :duration=>"42"],
   :fallback_content => "Your browser does not support HTML5 video tags." ) %>
-<%= cl_image_tag @lesson.photo.key, height: 300, width: 400 %>
+  <% @lesson.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+
 <br>
 <%= link_to "volver a lecciones", lessons_path %>
