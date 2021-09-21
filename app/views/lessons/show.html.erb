@@ -2,6 +2,7 @@
   <h2><%= @lesson.name %></h2>
   <div>
     <%= cl_video_tag( @lesson.video.key,
+      :start_offset=>"2", :resource_type=>"video",
       :loop => false, :controls => true,
       :transformation => [
         :height=>300, :width=>480, :crop=>"scale",
