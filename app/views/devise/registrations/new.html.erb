@@ -1,49 +1,53 @@
 <div class="container">
-
-<h1>Hola Bienvenidos </h1>
-  <H2> Somos Joaquin y Patricia un Taller para Personas Sordas y Oyentes
-  donde aprenderan la LectoEscritura Deletreo Dactilologico Lectura Labial
-  Lengua de Señas LSCH.
-  Teniendo una comunicacion mas inclusiva y logrando erradicar la analfabetizacion
-  que afecta a la Comunidad Sorda.</H2>
-
- <div class="text-center">
-    <%= cl_video_tag( "../Lessons/Otros/Bienvenida_video",
-      :loop => false, :controls => true,
-      :transformation => [
-        :height=>360, :width=>480, :crop=>"pad",
-        :quality=>70 ],
-      :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+  <div class="row">
+    <div class="col">
+      <h1> </h1>
+    </div>
   </div>
+  <div class="card mb-3">
+    <div class="row g-0 d-flex justify-content-center">
+      <div class="col-5 align-items-center">
+        <div class="text-center pt-4">
+          <h3>Cancion Vocales en Señas</h3>
+        </div>
+          <%= cl_video_tag("../Lessons/Otros/registro_video",
+          :start_offset=>"10", :resource_type=>"video",
+          :loop => false, :controls => true,
+          :transformation => [
+            :height=>300, :width=>480, :crop=>"scale",
+            :quality=>"auto" ],
+          :fallback_content => "Your browser does not support HTML5 video tags." ) %>
 
-</div>
+      </div>
+      <div class="col-3 m-3">
 
-<div class="container">
-  <h2>Sign up</h2>
+        <h2>Registro</h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Registrarse", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <div class="dropdown-divider"></div>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
-  </div>
-
-<% end %>
-
-<%= render "devise/shared/links" %>
 </div>
