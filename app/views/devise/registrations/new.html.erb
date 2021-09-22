@@ -8,7 +8,7 @@
     <div class="row g-0 d-flex justify-content-center">
       <div class="col-5 align-items-center">
         <div class="text-center pt-4">
-          <h3>Cancion Vocales en Señas</h3>
+          <h3>Cancion en Señas</h3>
         </div>
           <%= cl_video_tag("../Lessons/Otros/registro_video",
           :start_offset=>"10", :resource_type=>"video",
@@ -28,14 +28,17 @@
 
         <div class="form-inputs">
           <%= f.input :email,
+                      label: "Correo",
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
           <%= f.input :password,
+                      label: "Contraseña",
                       required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      hint: ("#{@minimum_password_length} caracteres como mínimo" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
+                      label: "Repite la contraseña",
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
