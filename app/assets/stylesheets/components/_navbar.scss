@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #7027A0;
-  color: #E67E22;
+  background: $morado;
+  color: $orange;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,7 +12,10 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+$navbar-light-color: white;
+
 .navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
+.navbar-custom .navbar-text,
+.navbar-nav .nav-link {
     color: white;
 }

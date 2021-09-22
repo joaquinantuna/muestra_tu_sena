@@ -28,14 +28,17 @@
 
         <div class="form-inputs">
           <%= f.input :email,
+                      label: "Correo",
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
           <%= f.input :password,
+                      label: "Contraseña",
                       required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      hint: ("#{@minimum_password_length} caracteres como mínimo" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
+                      label: "Repite la contraseña",
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
