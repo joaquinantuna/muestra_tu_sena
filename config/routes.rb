@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "lessons/:id", to: "lessons#show", as: :lesson
   get "about", to: "pages#about"
   get "legal", to: "pages#legal"
+  get "donaciones", to: "pages#donaciones"
 end

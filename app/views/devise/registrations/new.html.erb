@@ -41,6 +41,45 @@
                       label: "Repite la contraseña",
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
+          <%= f.input :nombres,
+                      label: "Nombres",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "nombres" }%>
+          <%= f.input :apellidos,
+                      label: "Apellidos",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "apellidos" }%>
+          <%= f.input :condicion,
+                      label: "Condición",
+                      collection: ["sordo", "oyente"], prompt: "Condición",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "apellidos" }%>
+          <%= f.input :edad,
+                      label: "Edad",
+                      collection: 5..95, prompt: "Edad",
+                      size: 3,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "apellidos" }%>
+          <%= f.input :direccion,
+                      label: "Direccion",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "direccion" }%>
+          <%= f.input :ciudad,
+                      label: "Ciudad",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "ciudad" }%>
+          <%= f.input :telefono,
+                      label: "Telefono",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "telefono" }%>
+
         </div>
 
         <div class="form-actions">
