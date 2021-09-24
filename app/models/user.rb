@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :sessions
   has_many :lessons, through: :sessions
+
+  validates_presence_of :nombres, :apellidos, :direccion, :ciudad,
+                        :telefono, :edad, :condicion, message: "no puede estar en blanco"
+  validates :telefono, format: { with: /\A\d{9}\z/,
+    message: "Solo 9 dígitos" }
 end
