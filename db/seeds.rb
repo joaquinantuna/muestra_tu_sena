@@ -17,7 +17,7 @@ lesson_2 = Lesson.new(
   name: "Abecedario",
 )
 file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1631628238/Lessons/Abecedario/abecedario_foto.png")
-file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631701890/Lessons/Abecedario/Abecedario_video.mp4")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1632479591/Lessons/Abecedario/abecedario_video.mp4")
 
 lesson_2.photo.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
 lesson_2.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
@@ -36,8 +36,8 @@ lesson_3.save!
 lesson_4 = Lesson.new(
   name: "Familia",
 )
-file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1631698243/Lessons/Familia/familia_foto.jpg")
-file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631696281/Lessons/Familia/familia_video.mp4")
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1631722621/Lessons/Familia/Familia_foto.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631837624/Lessons/Familia/familia_video.mp4")
 
 lesson_4.photo.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
 lesson_4.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
@@ -46,6 +46,13 @@ lesson_4.save!
 user_1 = User.create(
   email: "user1@email.com",
   password: "12345678",
+  nombres: "Juan",
+  apellidos: "Perez",
+  direccion: "Calle #1111",
+  ciudad: "Santiago",
+  telefono: "999999999",
+  condicion: "sordo",
+  edad: "18"
 )
 
 Session.create(
