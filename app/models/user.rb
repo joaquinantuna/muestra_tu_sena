@@ -9,6 +9,5 @@ class User < ApplicationRecord
 
   validates_presence_of :nombres, :apellidos, :direccion, :ciudad,
                         :telefono, :edad, :condicion, message: "no puede estar en blanco"
-  validates :telefono, format: { with: /\A\d{9}\z/,
-    message: "Solo 9 dígitos" }
+  validates :telefono, format: { with: /\A\d{9}\z/, message: "Solo 9 dígitos" }
 end

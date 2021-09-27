@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :about, :legal, :donaciones ]
+  skip_before_action :authenticate_user!, only: [ :about, :legal, :donaciones ]
 
-  def home
-  end
   def about
   end
   def legal
