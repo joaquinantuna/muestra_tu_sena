@@ -43,6 +43,16 @@ lesson_4.photo.attach(io: file_foto, filename: 'foto.png', content_type: 'image/
 lesson_4.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
 lesson_4.save!
 
+lesson_5 = Lesson.new(
+  name: "Numeros",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1631545384/Lessons/Numeros/numeros_foto_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1632829498/Lessons/Numeros/Numeros_video.mp4")
+
+lesson_5.photo.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_5.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_5.save!
+
 user_1 = User.create(
   email: "user1@email.com",
   password: "12345678",
