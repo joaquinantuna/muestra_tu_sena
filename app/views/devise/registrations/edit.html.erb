@@ -13,14 +13,14 @@
           <p>En espera de confirmación del correo: <%= resource.unconfirmed_email %></p>
         <% end %>
 
-        <li> <div> <%= f.input :password,
+        <li><%= f.input :password,
                     label: "Contraseña",
                     hint: "Déjalo en blanco si no la quieres cambiar",
                     required: false,
                     input_html: { autocomplete: "new-password" } %>
         <%= f.input :password_confirmation,
                     required: false,
-                    input_html: { autocomplete: "new-password" } %> </div> </li>
+                    input_html: { autocomplete: "new-password" } %>
         <%= f.input :current_password,
                     label: "Contraseña actual",
                     hint: "Escribe tu contraseña actual para confirmar los cambios",
