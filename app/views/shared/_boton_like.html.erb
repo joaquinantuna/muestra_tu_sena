@@ -1,6 +1,11 @@
-
-  <div class="like-container">
-    <div  id="like-cnt">
-      <button type="button" class="btn btn-primary btn-lg material-icons">thumb_up</button>
-    </div>
-  </div>
+<div>
+  <i></i>
+  <span>liked!</span>
+</div>
+<script>
+    $(function() {
+    $( "i" ).click(function() {
+      $( "i,span" ).toggleClass( "press", 1000 );
+    });
+  });
+</script>

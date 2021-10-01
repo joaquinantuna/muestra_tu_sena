@@ -24,9 +24,11 @@
         </li>
         <li class="nav-item">
           <%= link_to "Lecciones", lessons_path, class: "nav-link text-white" %>
+          <%= link_to "Mi perfil", edit_user_registration_path(current_user), class: "dropdown-item" %>
         </li>
         <li class="nav-item">
           <%= link_to "Quienes Somos", about_path, class: "nav-link text-white" %>
+          <%= link_to "Salir", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "logo.jpg",   class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
