@@ -1,5 +1,6 @@
 <div class="container text-center">
   <div>
+  
   <h2>lecciones</h2>
   <% @lessons.each do |lesson| %>
     <li><%= link_to lesson.name, lesson_path(lesson) %></li>
