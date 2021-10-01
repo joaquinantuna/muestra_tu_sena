@@ -1,25 +1,4 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1> </h1>
-    </div>
-  </div>
-  <div class="card mb-3">
-    <div class="row g-0 d-flex justify-content-center">
-      <div class="col-5 align-items-center">
-        <div class="text-center pt-4">
-          <h3>Cancion Pollitos Señas</h3>
-        </div>
-          <%= cl_video_tag("../Lessons/Otros/registro_video",
-          :start_offset=>"10", :resource_type=>"video",
-          :loop => false, :controls => true,
-          :transformation => [
-            :height=>300, :width=>480, :crop=>"scale",
-            :quality=>"auto" ],
-          :fallback_content => "Your browser does not support HTML5 video tags." ) %>
-
-      </div>
-      <div class="col-3 m-3">
 
         <h2>Registro</h2>
 
@@ -89,7 +68,4 @@
         <div class="dropdown-divider"></div>
           <%= render "devise/shared/links" %>
         </div>
-      </div>
-    </div>
-  </div>
 </div>
