@@ -3,12 +3,13 @@
     <div class="col">
       <%= render "shared/bienvenidos" %>
     </div>
+
   </div>
   <div class="card mb-3">
     <div class="row g-0 d-flex justify-content-center">
       <div class="col-5 d-flex align-items-center">
 
-        <%= cl_video_tag( "../Lessons/Otros/bienvenida_video.mp4",
+        <%= cl_video_tag( "../Lessons/bienvenida/bienvenida_video.mp4",
           :start_offset=>"0", :resource_type=>"video",
           :loop => false, :controls => true,
           :transformation => [
