@@ -10,7 +10,7 @@
       :fallback_content => "Your browser does not support HTML5 video tags." ) %>
   </div>
   <div class="pb-5">
-    <%= cl_image_tag @lesson.photo.key, height: 300, width: 400 %>
+    <%= image_tag @lesson.photos[0], height: 300, width: 400 %>
   </div>
   <%= render "shared/boton_like"  %>
   <div>
