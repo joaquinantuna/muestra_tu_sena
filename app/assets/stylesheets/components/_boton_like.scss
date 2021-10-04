@@ -8,68 +8,70 @@ body {
 //  background:#ddd;
   height:100%;
 }
-/*
-div {
-  height:100px;
-  margin:0 auto;
-  position: relative;
-}
-*/
-i {
-  cursor:pointer;
-  padding:10px 12px 8px;
-  background:#fff;
-  border-radius:50%;
-  display:inline-block;
-  margin:0 0 15px;
-  color:#aaa;
-  transition:.2s;
-}
 
-i:hover {
-  color:#666;
-}
+.boton {
+    div {
+    height:100px;
+    margin:0 auto;
+    position: relative;
+  }
+  i {
+    cursor:pointer;
+    padding:10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 0 15px;
+    color:#aaa;
+    transition:.2s;
+  }
 
-i:before {
-  font-family:fontawesome;
-  content:'\f004';
-  font-style:normal;
-}
+  i:hover {
+    color:#666;
+  }
 
-span {
-  position: absolute;
-  bottom:70px;
-  left:0;
-  right:0;
-  visibility: hidden;
-  transition:.6s;
-  z-index:-2;
-  font-size:2px;
-  color:transparent;
-  font-weight:400;
-}
+  i:before {
+    font-family:fontawesome;
+    content:'\f004';
+    font-style:normal;
+  }
 
-i.press {
-  animation: size .4s;
-  color:#ffaf02;
-}
+  i.press {
+    animation: size .4s;
+    color:$fondo;
+    background: red;
+  }
 
-span.press {
-  bottom:120px;
-  font-size:14px;
-  visibility:visible;
-  animation: fade 1s;
-}
+  span {
+    position: absolute;
+    bottom:70px;
+    left:0;
+    right:0;
+    visibility: hidden;
+    transition:.6s;
+    z-index:-2;
+    font-size:2px;
+    color:transparent;
+    font-weight:400;
+  }
 
-@keyframes fade {
-  0% {color: transparent;}
-  50% {color:#e23b3b;}
-  100% {color:transparentize($color: #e23b3b, $amount: 0);}
-}
+  span.press {
+    //bottom:120px;
+    font-size:140px;
+    visibility:visible;
+    animation: fade 1s;
+  }
 
-@keyframes size {
-  0% {padding:10px 12px 8px;}
-  50% {padding:14px 16px 12px;
-    margin-top:-4px;}
-  100% {padding:10px 12px 8px;}
+  @keyframes fade {
+    0% {color: transparent;}
+    50% {color:#e23b3b;}
+    100% {color:transparentize($color: #e23b3b, $amount: 1);}
+  }
+
+  @keyframes size {
+    0% {padding:10px 12px 8px;}
+    50% {padding:14px 16px 12px;
+      margin-top:-4px;}
+    100% {padding:10px 12px 8px;}
+  }
 }
