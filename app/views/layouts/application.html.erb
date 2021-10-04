@@ -7,16 +7,29 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/mojs/latest/mo.min.js">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js">
+
+
   </head>
 
   <body>
-   <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render 'shared/navbar' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= render 'shared/flashes' %>
 
-    <%= yield %>
+    <div class="justify-content-center">
+      <%= yield %>
+    </div>
+
+    <%= render 'shared/footer' %>
   </body>
 </html>

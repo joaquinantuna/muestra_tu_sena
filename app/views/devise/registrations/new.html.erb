@@ -1,25 +1,71 @@
-<h2>Sign up</h2>
+<div class="container">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+        <h2>Registro</h2>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      label: "Correo",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      label: "Contraseña",
+                      required: true,
+                      hint: ("#{@minimum_password_length} caracteres como mínimo" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      label: "Repite la contraseña",
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :nombres,
+                      label: "Nombres",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "nombres" }%>
+          <%= f.input :apellidos,
+                      label: "Apellidos",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "apellidos" }%>
+          <%= f.input :condicion,
+                      label: "Condición",
+                      collection: ["sordo", "oyente"], prompt: "Condición",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "apellidos" }%>
+          <%= f.input :edad,
+                      label: "Edad",
+                      collection: 5..95, prompt: "Edad",
+                      size: 3,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "apellidos" }%>
+          <%= f.input :direccion,
+                      label: "Direccion",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "direccion" }%>
+          <%= f.input :ciudad,
+                      label: "Ciudad",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "ciudad" }%>
+          <%= f.input :telefono,
+                      label: "Telefono",
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "telefono" }%>
 
-<%= render "devise/shared/links" %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Registrarse", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <div class="dropdown-divider"></div>
+          <%= render "devise/shared/links" %>
+        </div>
+</div>
