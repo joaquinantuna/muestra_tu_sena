@@ -1,0 +1,1 @@
+  <div id="mano" ><%= image_tag "mano.jpg",  height:80 %></div>

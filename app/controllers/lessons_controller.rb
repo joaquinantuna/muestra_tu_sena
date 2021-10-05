@@ -2,6 +2,7 @@ class LessonsController < ApplicationController
 
   def index
     @lessons = Lesson.all
+    #@user = Users.find(params[:current_user])
   end
 
   def show

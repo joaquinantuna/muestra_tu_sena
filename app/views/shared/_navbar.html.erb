@@ -5,7 +5,7 @@
 
 
     <% end %>
-  <div id="mano" ><%= image_tag "mano.jpg",  height:80 %></div>
+
 
 
 
@@ -14,22 +14,20 @@
   </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse px-2 py-1 m-0 rounded bg-primary" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active ">
-          <%= link_to "Home", root_path, class: "nav-link text-white" %>
+
+        <li class="nav-item">
+          <%= link_to "Lecciones", lessons_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Lecciones", lessons_path, class: "nav-link text-white" %>
+          <%= link_to "Quienes Somos", about_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Quienes Somos", about_path, class: "nav-link text-white" %>
-        </li>
-        <li>
           <%= link_to "Salir", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
-        <li>
+        <li class="nav-item">
           <%= link_to "Mi perfil", edit_user_registration_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">

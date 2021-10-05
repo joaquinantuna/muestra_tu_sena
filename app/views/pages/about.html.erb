@@ -2,9 +2,9 @@
 
   <%= render "shared/bienvenidos" %>
 
-   <div class="text-center pt-4">
-          <h3>Cancion Pollitos Señas</h3>
-        </div>
+  <div class="text-center pt-4">
+        <h3>Cancion Pollitos Señas</h3>
+
           <%= cl_video_tag("../Lessons/Otros/registro_video",
           :start_offset=>"10", :resource_type=>"video",
           :loop => false, :controls => true,
@@ -12,14 +12,11 @@
             :height=>300, :width=>480, :crop=>"scale",
             :quality=>"auto" ],
           :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+   <br>
+   <a href="muestratusena@gmail.com">Correo electronico</a><br>
+   <a href="https://facebook.com/muestratusena">https://www.facebook.com/muestratusena</a><br>
 
-      </div>
+   <%= link_to "Iniciar sesión", new_user_session_path, class: "btn btn-primary" unless user_signed_in? %>
 
-
-  <a href="muestratusena@gmail.com">Correo electronico</a><br>
-  <a href="https://facebook.com/muestratusena">https://www.facebook.com/muestratusena</a><br>
-
-  <%= link_to "Iniciar sesión", new_user_session_path, class: "btn btn-primary" unless user_signed_in? %>
-
-
+  </div>
 </div>
