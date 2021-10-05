@@ -1,19 +1,19 @@
 <div class="conteiner text-center">
-  <h2 class="">Lecciones</h2>
-  <ul class="px-5 justify-content-center list-unstyled">
+  <h2>Lecciones <%= current_user.nombres %> </h2>
+  <div class="w-50 pl-5 pt-5 mx-auto">
+    <ul class="px-5 list-unstyled">
 
-
-    <% @lessons.each do |lesson| %>
-        <li class="media mb-2" style="text-align: center;">
-          <div class="media">
+      <% @lessons.each do |lesson| %>
+        <li class="media mb-5 ">
+          <div class="media ">
             <%= image_tag lesson.photos[1], class:"img-fluid rounded-circle align-self-center mr-3", alt:"Foto lección", style:"height: 64px;" %>
             <div class="media-body align-self-center">
-              <h2 class="mt-0"><%= link_to lesson.name, lesson_path(lesson) %></h2>
+              <h2><%= link_to lesson.name, lesson_path(lesson) %></h2>
             </div>
           </div>
         </li>
       <% end %>
 
-
-  </ul>
+    </ul>
+  </div>
 </div>

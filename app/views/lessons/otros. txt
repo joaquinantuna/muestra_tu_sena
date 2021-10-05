@@ -1,38 +1,42 @@
+<div class="conteiner text-center">
+  <h2>Lecciones <%= current_user.nombres %> </h2>
 
+  <ul class="px-5 list-unstyled">
 
-  <div class="d-flex flex-wrap">
-    <ul class="list-unstyled">
-
-      <% @lessons.each do |lesson| %>
-        <li class="media mb-2">
-          <div class="media">
-            <%= image_tag lesson.photos[1], class:"img-fluid rounded-circle align-self-center mr-3", alt:"Foto lección", style:"height: 64px;" %>
-            <div class="media-body align-self-center">
-              <h2 class="mt-0"><%= link_to lesson.name, lesson_path(lesson) %></h2>
-            </div>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
-
-<% @lessons.each do |lesson| %>
-      <li>
-        <div class="card mb-4 bg-transparent" style="width: 18rem;" >
-
-          <div class="row g-0">
-            <div class=" col-md-4 border-0 pr-0">
-              <%= image_tag lesson.photos[1], class:"img-fluid rounded-circle align-middle", alt:"Foto lección", style:"height: 100px;" %>
-
-            </div>
-            <div class="col-md-8 card-body">
-
-              <h2 class="text-left p-0"><%= link_to lesson.name, lesson_path(lesson) %></h2>
-
-            </div>
+    <% @lessons.each do |lesson| %>
+      <li class="media mb-2">
+        <div class="media">
+          <%= image_tag lesson.photos[1], class:"img-fluid rounded-circle align-self-center mr-3", alt:"Foto lección", style:"height: 64px;" %>
+          <div class="media-body align-self-center">
+            <h2><%= link_to lesson.name, lesson_path(lesson) %></h2>
           </div>
         </div>
       </li>
     <% end %>
+
+  </ul>
+</div>
+
+
+<div class="conteiner text-center">
+  <h2>Lecciones <%= current_user.nombres %> </h2>
+
+  <% @lessons.each do |lesson| %>
+    <li>
+      <div class="card mb-4 bg-transparent" style="width: 18rem;" >
+
+        <div class="row g-0">
+          <div class=" col-md-4 border-0 pr-0">
+            <%= image_tag lesson.photos[1], class:"img-fluid rounded-circle align-middle", alt:"Foto lección", style:"height: 100px;" %>
+
+          </div>
+          <div class="col-md-8 card-body">
+
+            <h2 class="text-left p-0"><%= link_to lesson.name, lesson_path(lesson) %></h2>
+
+          </div>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</div>
