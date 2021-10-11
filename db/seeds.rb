@@ -90,6 +90,110 @@ lesson_7.video.attach(io: file_video, filename: 'video.mp4', content_type: 'vide
 lesson_7.save!
 
 
+lesson_8 = Lesson.new(
+  name: "Medios de Transportes",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633687119/Lessons/medios%20de%20transportes/transporte_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633687501/Lessons/medios%20de%20transportes/transporte_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1633687659/Lessons/medios%20de%20transportes/transporte_video.mp4")
+
+lesson_8.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_8.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_8.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_8.save!
+
+
+
+lesson_9 = Lesson.new(
+  name: "Medios de Comunicacion",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633143578/Lessons/medios%20de%20comunicacion/comunicacion_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633143604/Lessons/medios%20de%20comunicacion/comunicacion_foto_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1633143567/Lessons/medios%20de%20comunicacion/comunicacion_video.mp4")
+
+lesson_9.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_9.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_9.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_9.save!
+
+
+lesson_10 = Lesson.new(
+  name: "Medios de Comunicacion",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633143578/Lessons/medios%20de%20comunicacion/comunicacion_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633143604/Lessons/medios%20de%20comunicacion/comunicacion_foto_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1633143567/Lessons/medios%20de%20comunicacion/comunicacion_video.mp4")
+
+lesson_10.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_10.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_10.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_10.save!
+
+
+lesson_11 = Lesson.new(
+  name: "Dias de la Semana",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633069945/Lessons/Dias%20de%20la%20semana_video/semanas_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633687909/Lessons/Dias%20de%20la%20semana_video/semana_foto_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1633687750/Lessons/Dias%20de%20la%20semana_video/semana_video.mp4")
+
+lesson_11.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_11.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_11.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_11.save!
+
+
+lesson_12 = Lesson.new(
+  name: "Meses del Año",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633697782/Lessons/meses%20de%20a%C3%B1o_video/meses_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633697968/Lessons/meses%20de%20a%C3%B1o_video/meses_fotos_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1633697082/Lessons/meses%20de%20a%C3%B1o_video/Meses_videos.mp4")
+
+lesson_12.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_12.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_12.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_12.save!
+
+lesson_13 = Lesson.new(
+  name: "Pronombres Personales",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633071680/Lessons/pronombres%20personales/pronombres_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633071779/Lessons/pronombres%20personales/pronombres_foto_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1633071503/Lessons/pronombres%20personales/pronombres-video.mp4")
+
+lesson_13.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_13.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_13.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_13.save!
+
+
+lesson_14 = Lesson.new(
+  name: "Verbos",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632001509/Lessons/verbos/dormir_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633386636/Lessons/verbos/escribir_foto_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1633070169/Lessons/verbos/Verbos_video.mp4")
+
+lesson_14.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_14.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_14.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_14.save!
+
+
+
+lesson_15 = Lesson.new(
+  name: "Chile",
+)
+file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632003209/Chile/cueca_foto.jpg")
+file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633980425/Chile/cueca_foto_leccion.jpg")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631699145/Chile/cueca_video.mp4")
+
+lesson_15.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
+lesson_15.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
+lesson_15.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
+lesson_15.save!
+
 user_1 = User.create(
   email: "user1@email.com",
   password: "12345678",
