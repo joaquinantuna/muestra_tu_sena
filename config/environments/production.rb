@@ -2,6 +2,24 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'http://APP.herokuapp.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # config.action_mailer.default_url_options = {:Host => 'yourdomain.com'}
+  config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #:address => "127.0.0.1",
+  #:port    => 25,
+  #:domain  => 'http://APP.herokuapp.com'
+#}
+
+  config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: ENV["GMAIL_DOMAIN"],
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: ENV["GMAIL_USERNAME"],
+      password: ENV["GMAIL_PASSWORD"]
+ }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -113,14 +131,5 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-      address: "smtp.gmail.com",
-      port: 587,
-      domain: ENV["GMAIL_DOMAIN"],
-      authentication: "plain",
-      enable_starttls_auto: true,
-      user_name: ENV["GMAIL_USERNAME"],
-      password: ENV["GMAIL_PASSWORD"]
-  }
+
 end
