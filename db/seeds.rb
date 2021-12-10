@@ -64,7 +64,7 @@ lesson_5.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'ima
 lesson_5.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
 lesson_5.save!
 
-lesson_6 = Lesson.new(D
+lesson_6 = Lesson.new(
   name: "Estaciones",
 )
 file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632867498/Lessons/estaciones/estaciones_foto.jpg")
