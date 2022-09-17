@@ -3,11 +3,10 @@ Session.destroy_all
 Lesson.destroy_all
 User.destroy_all
 
-lesson_1 = Lesson.new(
+=begin lesson_1 = Lesson.new(
   name: "Vocales",
 )
-
-file_foto1 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632944657/Lessons/Vocales/vocales_foto..jpg")
+file_foto1 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632944657/Lessons/Vocales/vocales_foto.jpg")
 file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633034078/Lessons/Vocales/vocales_fotos_leccion.jpg")
 file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631696555/Lessons/Vocales/vocales_video.mp4")
 
@@ -15,7 +14,7 @@ lesson_1.photos.attach(io: file_foto1, filename: 'foto1.png', content_type: 'ima
 lesson_1.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
 lesson_1.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
 lesson_1.save!
-
+=end
 lesson_2 = Lesson.new(
   name: "Abecedario",
 )
@@ -64,7 +63,7 @@ lesson_5.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'ima
 lesson_5.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
 lesson_5.save!
 
-lesson_6 = Lesson.new(D
+lesson_6 = Lesson.new(
   name: "Estaciones",
 )
 file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632867498/Lessons/estaciones/estaciones_foto.jpg")
@@ -76,7 +75,7 @@ lesson_6.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'ima
 lesson_6.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
 lesson_6.save!
 
-lesson_7 = Lesson.new(
+=begin lesson_7 = Lesson.new(
   name: "Emociones",
 )
 file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632952055/Lessons/emociones/emociones_foto.jpg")
@@ -87,7 +86,7 @@ lesson_7.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image
 lesson_7.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
 lesson_7.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
 lesson_7.save!
-
+=end
 
 lesson_8 = Lesson.new(
   name: "Medios de Transportes",
@@ -182,7 +181,7 @@ lesson_15 = Lesson.new(
 )
 file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1634388532/canciones/concuna_foto.jpg")
 file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1634389021/canciones/concuna_foto_leccion.jpg")
-file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1634180353/Chile/cuncuna_video.mp4")
+file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1634206842/canciones/cuncuna_video_.mp4")
 
 lesson_15.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'image/png')
 lesson_15.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
@@ -203,8 +202,7 @@ lesson_16.video.attach(io: file_video, filename: 'video.mp4', content_type: 'vid
 lesson_16.save!
 
 
-lesson_17 = Lesson.new(
-
+=begin lesson_17 = Lesson.new(
   name: "Vaquita & Loca",
 )
 file_foto = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1634179052/canciones/vaquita_foto.jpg")
@@ -229,7 +227,7 @@ lesson_18.photos.attach(io: file_foto, filename: 'foto.png', content_type: 'imag
 lesson_18.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
 lesson_18.video.attach(io: file_video, filename: 'video.mp4', content_type: 'video/mp4')
 lesson_18.save!
-
+=end
 user_1 = User.create(
   email: "user1@email.com",
   password: "12345678",
@@ -243,7 +241,7 @@ user_1 = User.create(
 )
 
 Session.create(
-  lesson: lesson_1,
+  lesson: lesson_2,
   user: user_1,
   rating: 4,
   status: "public"
