@@ -2,13 +2,13 @@ require 'open-uri'
 Session.destroy_all
 Lesson.destroy_all
 User.destroy_all
-
-=begin lesson_1 = Lesson.new(
+=begin
+lesson_1 = Lesson.new(
   name: "Vocales",
 )
-file_foto1 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1632944657/Lessons/Vocales/vocales_foto.jpg")
-file_foto2 = open("https://res.cloudinary.com/muestra-tu-sena/image/upload/v1633034078/Lessons/Vocales/vocales_fotos_leccion.jpg")
-file_video = open("https://res.cloudinary.com/muestra-tu-sena/video/upload/v1631696555/Lessons/Vocales/vocales_video.mp4")
+file_foto1 = File_open(Rails.root.join("app/assets/images/vocales/vocales-png.png"))
+#file_foto2 = open("app/assets/images/vocales/vocales-interior.png")
+#file_video = open("https://drive.google.com/file/d/1aKxdGQE64IYohA44hDyJhZACRLGe0Y4R/view?usp=sharing")
 
 lesson_1.photos.attach(io: file_foto1, filename: 'foto1.png', content_type: 'image/png')
 lesson_1.photos.attach(io: file_foto2, filename: 'foto2.png', content_type: 'image/png')
