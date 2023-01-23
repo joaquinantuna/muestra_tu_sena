@@ -231,8 +231,8 @@ lesson_18.save!
 user_1 = User.create(
   email: "user1@email.com",
   password: "12345678",
-  nombres: "Juan",
-  apellidos: "Perez",
+  nombres: "Patty",
+  apellidos: "Rojo",
   direccion: "Calle #1111",
   ciudad: "Santiago",
   telefono: "999999999",
